@@ -1,0 +1,81 @@
+---
+title: 'Trouver la position grâce à la triangulation'
+date: '2024-05-16'
+tags: ['localisation', 'géometrie']
+draft: false
+summary: Considérons un plan 2D avec trois points de référence dont les coordonnées sont ...
+---
+
+<TOCInline toc={props.toc}/>
+
+## Introduction
+
+
+
+Considérons un plan 2D avec trois points de référence dont les coordonnées sont ($x_1$, $y_1$), ($x_2$, $y_2$) et ($x_3$, $y_3$).
+On cherche à déterminer la position ($x$, $y$) d'un point en mesurant $d_1$, $d_2$ et $d_3$.
+
+$$
+{d_1}^2 = (x-x_1)^2 + (y-y_1)^2 \\ {d_2}^2 = (x-x_2)^2 + (y-y_2)^2 \\ {d_3}^2 = (x-x_3)^2 + (y-y_3)^2 
+$$
+
+En développant :
+
+$$
+{d_1}^2 = x^2 - 2xx_1 + {x_1}^2 + y^2 - 2yy_1 + {y_1}^2 \\ 
+{d_2}^2 = x^2 - 2xx_2 + {x_2}^2 + y^2 - 2yy_2 + {y_2}^2 \\ 
+{d_3}^2 = x^2 - 2xx_3 + {x_3}^2 + y^2 - 2yy_3 + {y_3}^2 \\ 
+$$
+
+L'objectif est d'éliminer les termes au carré. On va alors soustraite (1) à (2) et (1) à (3).
+
+$$
+{d_2}^2 - {d_1}^2 = - 2x(x_2 - x_1) + {x_2}^2 - {x_1}^2 - 2y(y_2 - y_1) + {y_2}^2 - {y_1}^2 \\ 
+{d_3}^2 - {d_1}^2 = - 2x(x_3 - x_1) + {x_3}^2 - {x_1}^2 - 2y(y_3 - y_1) + {y_3}^2 - {y_1}^2 \\ 
+$$
+
+Et en réagencent :
+
+$$
+x(x_1 - x_2) + y(y_1 - y_2) = \frac{{d_2}^2 - {d_1}^2 - {x_2}^2 + {x_1}^2 - {y_2}^2 + {y_1}^2}{2} \\
+x(x_1 - x_3) + y(y_1 - y_3) = \frac{{d_3}^2 - {d_1}^2 - {x_3}^2 + {x_1}^2 - {y_3}^2 + {y_1}^2}{2}
+$$
+
+On cherche à mettre ces équations sous la forme suivante : 
+
+$$
+\begin{pmatrix} A & B \\ D & E \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} C \\ F \end{pmatrix}
+$$
+
+Par identification, on obtient : 
+$$
+\left\{\begin{matrix}
+A = x_1 - x_2 \\ B = y_1 - y_2 \\  C = \frac{{d_2}^2 - {d_1}^2 - {x_2}^2 + {x_1}^2 - {y_2}^2 + {y_1}^2}{2} \\ D = x_1 - x_3 \\ E = y_1 - y_3 \\ F = \frac{{d_3}^2 - {d_1}^2 - {x_3}^2 + {x_1}^2 - {y_3}^2 + {y_1}^2}{2}
+\end{matrix}\right.
+$$
+
+Il suffit alors d'inverser la matrice pour obtenir la position ($x$, $y$)
+
+## Exemple en 2 dimensions
+
+Considérons un plan 2D avec trois points de référence dont les coordonnées sont $(x_1=0, y_1=0)$, $(x_2=1, y_2=0)$ et $(x_3=0, y_3=1)$.
+On cherche à déterminer la position $(x, y)$ d'un point en mesurant $d_1$, $d_2$ et $d_3$. Imaginons qu'il se situe en $(1,1)$, et on cherche à retrouver cette position.
+
+Nos différents capteurs nous renvoient les 3 distances suivantes :
+
+$$
+{d_1}^2 = 1^2 - 2*1*0 + 0^2 + 1^2 - 2*1*0 + 0^2 = 2 \\ 
+{d_2}^2 = 1^2 - 2*1*1 + 1^2 + 0^2 - 2*1*0 + 0^2 = 1\\ 
+{d_3}^2 = 1^2 - 2*1*0 + 0^2 + 1^2 - 2*1*1 + 1^2 = 1\\ 
+$$
+
+En remplaçant les valeurs dans l'équation matricielle finale :
+
+$$
+\begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} -1 \\ -1 \end{pmatrix}
+$$
+
+D'où la solution : 
+$$
+\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+$$
