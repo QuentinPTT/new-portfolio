@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
+  title: 'Quentin PETIT',
   author: 'Quentin PETIT',
   headerTitle: 'QuentinPTT',
   description: 'Tout ce qui me passe par la tête',

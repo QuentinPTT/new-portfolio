@@ -13,6 +13,7 @@ import React, { useState } from 'react';
 import projectsData from '@/data/projectsData';
 import Card from '@/components/Card';
 
+
 // Function to get unique tags with explicit return type
 const getUniqueTags = (data: Project[]): string[] => {
   const tags = data.flatMap((project) => project.techs);

@@ -2,7 +2,7 @@ import jobsData from '@/data/jobsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
 
-export const metadata = genPageMetadata({ title: 'Projects' })
+export const metadata = genPageMetadata({ title: 'Expériences' })
 
 export default function Jobs() {
   return (

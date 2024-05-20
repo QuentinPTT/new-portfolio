@@ -2,7 +2,7 @@ const jobsData = [
   {
     "title": "Nexter Robotics",
     "date": "2018-01-01",
-    "description": "Design of a test bench for testing electronic boards <br /> 🎯 Missions : \n - Mechanical test interface in CAD\n- Designing on-board electronics\n- Validation software development",
+    "description": "Design of a test bench for testing electronic boards \n\n 🎯 Missions : \n - Mechanical test interface in CAD\n- Designing on-board electronics\n- Validation software development",
     "link": "https://www.knds.fr/filiales/nexter-robotics",
     "imgSrc": "/static/images/nexter_robotics.jpg",
     "href": "https://www.knds.fr/filiales/nexter-robotics",
