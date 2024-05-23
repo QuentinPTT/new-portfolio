@@ -40,7 +40,7 @@ export default function AuthorLayout({ children, content }: Props) {
               <SocialIcon kind="linkedin" href={linkedin} />
               <SocialIcon kind="x" href={twitter} />
             </div>
-            <Link href="/static/images/arm.jpg" className='bg-primary-600 hover:bg-primary-500 transition-colors text-white px-4 py-2 rounded w-full text-center'>
+            <Link href="/static/pdf/cv.pdf" target='_blank' className='bg-primary-600 hover:bg-primary-500 transition-colors text-white px-4 py-2 rounded w-full text-center'>
               CV
             </Link>
           </div>
