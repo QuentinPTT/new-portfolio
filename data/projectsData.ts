@@ -1,11 +1,27 @@
 const projectsData = [
   {
+    "title": "Tracking Comédiens pour le Spectacle Vivant",
+    "date": "2024-05-26",
+    "description": "Le Théâtre National de Strasbourg développe une solution économique de suivi en temps réel pour améliorer la spatialisation du son (WFS) et en créant des programmes pour filtrer, lisser et prédire les mouvements du comédiens.",
+    "href": "",
+    "imgSrc": "/static/images/tracking_comediens.png",
+    "techs": ["IA", "Traitement du signal"],
+  },
+  {
+    "title": "ALL4wALL - Smart Alloys for WALLs",
+    "date": "2024-05-20",
+    "description": "Prédire la réponse dynamique sur table vibrante d'un mur en béton armé de 40 tonnes en forme de U.",
+    "href": "",
+    "imgSrc": "/static/images/vime.png",
+    "techs": ["Traitement du signal", "IA"],
+  },
+  {
     "title": "Nexed",
     "date": "2018-01-01",
     "description": "Saas d'aide à la décision pour les e-commerçants",
     "href": "https://nexed.fr",
     "imgSrc": "/static/images/nexed.png",
-    "techs": ["NextJS", "TailwindCSS"],
+    "techs": ["Web"],
   },
   {
     "title": "Portfolio",
@@ -13,7 +29,7 @@ const projectsData = [
     "description": "Ancienne page personnelle créée avec Gatsby.",
     "href": "https://quentinptt.fr/",
     "imgSrc": "/static/images/portfolio.jpg",
-    "techs": ["NextJS", "TailwindCSS"],
+    "techs": ["Web"],
   },
   {
     "title": "Search Bar",
@@ -21,7 +37,7 @@ const projectsData = [
     "description": "Une barre de recherche légère construite en JavaScript pur, directement liée à un fichier de données JSON.",
     "href": "https://github.com/QuentinPTT/search-car-bar",
     "imgSrc": "/static/images/searchbar.gif",
-    "techs": ["JavaScript"],
+    "techs": ["Web"],
   },
   {
     "title": "Philo Flash",
@@ -29,7 +45,7 @@ const projectsData = [
     "description": "Application web responsive et personnalisable basée sur React présentant des biographies concises de philosophes célèbres stockées en JSON.",
     "href": "https://github.com/QuentinPTT/react-philosopher-wiki",
     "imgSrc": "/static/images/react_philosophie.png",
-    "techs": ["NextJS", "TailwindCSS"],
+    "techs": ["Web"],
   },
   {
     "title": "LMS - ISAE-Supmeca",
@@ -37,7 +53,7 @@ const projectsData = [
     "description": "Application Flask rapide qui simplifie l'accès au portail en ligne de mon école.",
     "href": "https://github.com/QuentinPTT/notes-supmeca",
     "imgSrc": "/static/images/notes_supmeca.png",
-    "techs": ["Flask", "Scraping"],
+    "techs": ["Scraping"],
   },
   {
     "title": "Scroll around Cars",
@@ -45,7 +61,7 @@ const projectsData = [
     "description": "Application web offrant une expérience de défilement transparent pour explorer tous les angles d'une voiture.",
     "href": "https://github.com/QuentinPTT/scroll-around-cars",
     "imgSrc": "/static/images/scroll_around_cars.gif",
-    "techs": ["JavaScript"],
+    "techs": ["Web"],
   },
   {
     "title": "Twitter Without Views",
@@ -53,7 +69,7 @@ const projectsData = [
     "description": "Extension Javascript Chrome pour désactiver le compteur de vues de Twitter.",
     "href": "https://github.com/QuentinPTT/twitter-without-views",
     "imgSrc": "/static/images/twv.jpg",
-    "techs": ["JavaScript"],
+    "techs": ["Web"],
   },
   {
     "title": "Just Think It",
@@ -61,7 +77,7 @@ const projectsData = [
     "description": "Interprétation des ondes EEG pour aider les personnes souffrant de handicaps moteurs à devenir plus indépendantes.",
     "href": "https://github.com/QuentinPTT/just-think-it",
     "imgSrc": "/static/images/just_think_it.gif",
-    "techs": ["IA", "Python"],
+    "techs": ["IA"],
   },
   {
     "title": "Interactive Map",
@@ -69,7 +85,7 @@ const projectsData = [
     "description": "Carte du monde et des continents, avec des commentaires sur chaque pays.",
     "href": "",
     "imgSrc": "/static/images/map_project.gif",
-    "techs": ["JavaScript"],
+    "techs": ["Web"],
   },
   {
     "title": "Scraping LaCentrale",
@@ -77,7 +93,7 @@ const projectsData = [
     "description": "Script Python pour accéder à l'API privée de LaCentrale afin de récupérer toutes les annonces correspondant aux critères définis par l'utilisateur.",
     "href": "https://github.com/QuentinPTT/lacentrale-api",
     "imgSrc": "/static/images/scraping_lacentrale.jpg",
-    "techs": ["Python", "Scraping"],
+    "techs": ["Scraping"],
   },
   {
     "title": "Robot Arm",
@@ -85,7 +101,7 @@ const projectsData = [
     "description": "Création d'un bras articulé en 3 dimensions à l'aide de nombreux servomoteurs.",
     "href": "/",
     "imgSrc": "/static/images/arm.jpg",
-    "techs": ["Arduino"],
+    "techs": ["Hardware"],
   }
 ]
 
